@@ -1,0 +1,24 @@
+- name: Copying zookeeper service file
+  template:
+    src: ./templates/zookeeper.service.j2
+    dest: /etc/systemd/system/zookeeper.service
+
+- name: Copying kafka service file
+  template:
+    src: ./templates/kafka.service.j2
+    dest: /etc/systemd/system/kafka.service
+
+- name: Start service kafka, if not started
+  service:
+    name: kafka
+    state: started
+
+- name: Restart service kafka
+  service:
+    name: kafka
+    state: restarted
+
+- name: Enable service kakfa, and not touch the state
+  service:
+    name: kafka
+    enabled: yes

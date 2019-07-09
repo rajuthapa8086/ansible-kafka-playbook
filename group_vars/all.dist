@@ -1,1 +1,12 @@
+# Timezone
 timezone:
+
+# Set password for user `kafka`
+# > Use `mkpasswd --method=sha-512` to generate password in terminal
+kafka_password:
+
+# Kafka home directory
+kafka_home:
+
+# Kafka binary (.tgz) url
+kafka_url:
