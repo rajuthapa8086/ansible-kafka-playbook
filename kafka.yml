@@ -1,0 +1,6 @@
+---
+  - name: Ansible playbook of kafka
+    hosts: all
+    become: true
+    roles:
+      - common
