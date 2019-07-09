@@ -1,0 +1,11 @@
+- name: Create a user named kafka
+  user:
+    name: kafka
+    password: "{{ kafka_password }}"
+    groups:
+      - sudo
+    state: present
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: "{{ kafka_home }}"

@@ -1,0 +1,11 @@
+- name: Upgrade
+  apt: update_cache=yes upgrade=yes cache_valid_time=86400
+
+- name: Include | ./user.yml
+  include: ./user.yml
+
+- name: Include | ./install.yml
+  include: ./install.yml
+
+- name: Include | ./service.yml
+  include: ./service.yml
